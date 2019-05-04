@@ -2,16 +2,14 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.jsx',
+  entry: './src/index.tsx',
   devtool: 'inline-source-map',
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        test: /\.(ts|js)x?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: ['babel-loader']
       },
       {
         test: /\.html$/,
@@ -23,7 +21,7 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['.js', '.jsx'] },
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
