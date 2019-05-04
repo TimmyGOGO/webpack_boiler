@@ -1,4 +1,5 @@
-**Evolving boilerplate:**
+# **Evolving boilerplate:**
+
 **First Commit:** Webpack react simple boilerplate 
 _the basis is a simple webpack+react+js boilerplate from_:
 _reference_: https://www.valentinog.com/blog/babel/
@@ -53,7 +54,7 @@ Actions to alter the previous project in js to typescript:
         "include": ["src"]
     }
     ```
-    
+
 
 
 
