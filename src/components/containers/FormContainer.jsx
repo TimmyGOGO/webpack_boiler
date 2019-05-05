@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
 import SimpleLayout from "../presentational/simpleLayout/simpleLayout.jsx";
+import './formContainer.css';
+
 class FormContainer extends Component {
   constructor() {
     super();
@@ -16,7 +18,7 @@ class FormContainer extends Component {
   render() {
     const { seo_title } = this.state;
     return (
-      <div>
+      <div className="formContainer_wrapper">
         <form id="article-form">
           <Input
             text="SEO title"
