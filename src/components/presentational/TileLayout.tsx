@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import './TileLayout.css';
 
 const ContentContainer = styled.div`
     background-color: white;
@@ -51,10 +52,12 @@ const TileLayout = () => (
     <Grid>
       <Row>
         <Tile>
-            <div style={{paddingBottom: '30%'}}>
-                <div >
-                    <img src="src/img/login.png"></img>
-                    <Text>Элемент 1</Text>
+            <div className="top">
+                <div>
+                    <div>
+                        <img src="src/img/login.png"></img>
+                        <Text>Элемент 1</Text>
+                    </div>
                 </div>
             </div>
         </Tile>
