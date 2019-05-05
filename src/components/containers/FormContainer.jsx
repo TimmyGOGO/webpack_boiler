@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
-import SimpleLayout from "../presentational/simpleLayout/simpleLayout.jsx";
+import TileLayout from "../presentational/TileLayout";
 import './formContainer.css';
+import styled from "styled-components";
+
+const FormContainerWrapper = styled.div`
+  margin: 10px;
+`;
 
 class FormContainer extends Component {
   constructor() {
@@ -18,19 +23,9 @@ class FormContainer extends Component {
   render() {
     const { seo_title } = this.state;
     return (
-      <div className="formContainer_wrapper">
-        <form id="article-form">
-          <Input
-            text="SEO title"
-            label="seo_title"
-            type="text"
-            id="seo_title"
-            value={seo_title}
-            handleChange={this.handleChange}
-          />
-        </form>
-        <SimpleLayout />
-      </div>
+      <FormContainerWrapper>
+        <TileLayout />
+      </FormContainerWrapper>
     );
   }
 }
