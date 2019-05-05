@@ -6,6 +6,10 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
+      { 
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'] 
+      },
       {
         test: /\.(ts|js)x?$/,
         exclude: /(node_modules|bower_components)/,
@@ -21,7 +25,7 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'] },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
