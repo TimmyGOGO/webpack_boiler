@@ -8,9 +8,19 @@ export const StyledTodoListContainer = styled.div`
 `
 
 const StyledHeadline = styled.div`
-  font-family: Roboto;
-  font-size: 24px;
-  line-height: 30px;
+  font-family: 'Coldiac';
+  font-size: 48px;
+  padding: 20px 10px;
+
+  width: 100%;
+  text-align: center;
+`
+
+const StyledParagraph = styled.p`
+  font-family: 'Montserat';
+  font-size: 16px;
+  text-align: center;
+
 `
 
 export interface ITodoList {}
@@ -21,7 +31,8 @@ export class TodoList extends React.PureComponent<ITodoList> {
   render() {
     return (
       <StyledTodoListContainer>
-        <StyledHeadline>TodoList component</StyledHeadline>
+        <StyledHeadline>TASKS LIST</StyledHeadline>
+        <StyledParagraph>Тестовое приложение: GRID CSS</StyledParagraph>
       </StyledTodoListContainer>
     )
   }

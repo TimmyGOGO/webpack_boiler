@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Dobrozrachniy-Regular';
+  src: url('../static/fonts/Dobrozrachniy-Regular.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'TTBluescreensRough';
+  src: url('../static/fonts/TTBluescreensRough-Light.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Rawer';
+  src: url('../static/fonts/Rawer.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Montserat';
+  src: url('../static/fonts/Montserrat-ExtraLight.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Coldiac';
+  src: url('../static/fonts/Coldiac.ttf');
+  font-weight: 300;
+}

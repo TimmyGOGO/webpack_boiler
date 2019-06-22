@@ -1,4 +1,4 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -6,9 +6,9 @@ module.exports = {
   devtool: 'inline-source-map',
   module: {
     rules: [
-      { 
+      {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'] 
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(ts|js)x?$/,
@@ -19,7 +19,23 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
+            loader: 'html-loader'
+          }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
           }
         ]
       }
@@ -28,8 +44,8 @@ module.exports = {
   resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'] },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html',
+      filename: './index.html'
     })
   ]
-};
+}
