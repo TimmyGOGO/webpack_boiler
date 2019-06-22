@@ -1,36 +1,36 @@
 .container {
-    background-color: black;
-    padding: 15px 0;
+  background-color: black;
+  padding: 15px 0;
 }
 
 .wrapper {
-    max-width: 1000px;
-    margin:0 auto;
-    height: 100%;
-    padding: 0 5px;
-    overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 5px;
+  overflow: hidden;
 }
 
 .row {
-    border: 1px solid #ff0
+  border: 1px solid #ff0;
 }
 
 .container .row {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
 .container .item {
-    text-align: center;
-    margin: 15px;
+  text-align: center;
+  margin: 15px;
 }
 
 .container .item .subtitle {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 3px 0;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 3px 0;
 }
 
 .container .item .text {
-    color: red;
+  color: red;
 }
