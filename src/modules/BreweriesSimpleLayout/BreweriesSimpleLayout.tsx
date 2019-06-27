@@ -1,17 +1,17 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import './grid.css'
+import './breweriesSimpleLayout.css'
 
-const StyledGridContainer = styled.div``
+const StyledBreweriesSimpleLayoutContainer = styled.div``
 
-interface IGridProps {
+interface IBreweriesSimpleLayoutProps {
   className?: string
 }
 
-class Grid extends React.PureComponent<IGridProps> {
+class BreweriesSimpleLayout extends React.PureComponent<IBreweriesSimpleLayoutProps> {
   render() {
     return (
-      <StyledGridContainer>
+      <StyledBreweriesSimpleLayoutContainer>
         <main className="wrapper">
           <section className="hero">
             <h1>You thirsty?</h1>
@@ -81,11 +81,11 @@ class Grid extends React.PureComponent<IGridProps> {
           </section>
         </main>
         <footer>
-          <p>&copy; 2019. Made with ❤ and CSS Grid.</p>
+          <p>&copy; 2019. Made with ❤ and CSS BreweriesSimpleLayout.</p>
         </footer>
-      </StyledGridContainer>
+      </StyledBreweriesSimpleLayoutContainer>
     )
   }
 }
 
-export default Grid
+export default BreweriesSimpleLayout
