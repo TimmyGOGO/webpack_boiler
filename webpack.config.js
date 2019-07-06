@@ -41,7 +41,7 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'] },
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.json'] },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
