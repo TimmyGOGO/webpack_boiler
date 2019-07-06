@@ -10,9 +10,6 @@ export interface ITrelloLayout {
 }
 
 export class TrelloLayout extends React.PureComponent<ITrelloLayout> {
-  state = {
-
-  }
 
   render() {
     return (
