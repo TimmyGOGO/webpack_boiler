@@ -57,6 +57,8 @@ Actions to alter the previous project in js to typescript:
        "include": ["src"]
    }
    ```
+   
+# **Extras:**
 
 **Using extra plugins for babel:**
 In order to add properties to classes and rest operator:
@@ -69,6 +71,7 @@ and add to .babelrc:
         "plugins": ["@babel/proposal-class-properties", "@babel/proposal-object-rest-spread"]
     }
     ```
+
 **Custom Fonts for your app:**:
    1. [Locally]: Use a font from your project's folder:
    **Important thing: DO NOT USE 'format(truetype)' or 'format(embedded-opentype)'**
@@ -85,3 +88,29 @@ and add to .babelrc:
    ```
    <link href="https://fonts.googleapis.com/css?family=Cinzel&display=swap" rel="stylesheet">
    ```
+
+**Adding scss and sass:**
+   1. To install: ``` npm install --save-dev node-sass sass-loader style-loader css-loader ```
+   2. To understand: 
+      - **node-sass** provides binding for Node.js to LibSass, a Sass compiler.
+      - **sass-loader** is a loader for Webpack for compiling SCSS/Sass files.
+      - **style-loader** injects our styles into our DOM.
+      - **css-loader** interprets @import and @url() and resolves them.
+   3. Edit webpack.config.js:
+      ```
+      module.exports = {
+        module: {
+          rules: [
+            {
+              test: /\.scss$/,
+              use: [
+                'style-loader', // creates style nodes from JS strings
+                'css-loader', // translates CSS into CommonJS
+                'sass-loader', // compiles Sass to CSS, using Node Sass by default
+              ],
+            },
+          ],
+        },
+      }; 
+      ```
+      for more details: https://github.com/webpack-contrib/sass-loader
