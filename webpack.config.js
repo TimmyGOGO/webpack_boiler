@@ -7,6 +7,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader', // compiles Sass to CSS, using Node Sass by default 
+        ]
+      },
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       },
@@ -24,10 +32,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
-      },
-      {
         test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
@@ -41,7 +45,7 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.css'] },
+  resolve: { extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss'] },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
